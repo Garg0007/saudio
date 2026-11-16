@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ज्ञानू AI पॉडकास्ट स्टूडियो | कक्षा 10 विज्ञान (RBSE) - ऋषि सर</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1e3a8a;
+    --primary-mid: #1d4ed8;
+    --primary-light: #3b82f6;
+    --accent: #f97316;
+    --accent-dark: #ea580c;
+    --success: #16a34a;
+    --success-bg: #dcfce7;
+    --warning: #eab308;
+    --bg-main: #f0f4f8;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --border-color: #cbd5e1;
+    --studio-grad: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #1e40af 100%);
+    --header-grad: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #f97316 100%);
+    --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 14px 34px rgba(30, 58, 138, 0.16);
+  }
+
+  body.dark-mode {
+    --bg-main: #0b1120;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --studio-grad: linear-gradient(135deg, #020617 0%, #0f172a 60%, #1e3a8a 100%);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 14px 34px rgba(0, 0, 0, 0.5);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-bottom: 40px;
+  }
+
+  .app-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 12px 14px;
+  }
+
+  /* Header Section */
+  .top-header {
+    background: var(--header-grad);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 18px 22px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .brand-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .owl-logo {
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    border: 3px solid #fde047;
+    flex-shrink: 0;
+  }
+
+  .brand-titles h1 {
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    line-height: 1.25;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  }
+
+  .brand-titles p {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .creator-pill {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(6px);
+    padding: 3px 11px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-top: 5px;
+    border: 1px solid rgba(255,255,255,0.35);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .action-btn {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 8px 13px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .action-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+  }
+
+  /* Progress & Stats Bar */
+  .stats-dashboard {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 14px 18px;
+    margin-top: 14px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+  }
+
+  .stats-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .stat-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .stat-chip {
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .chip-total { background: rgba(59, 130, 246, 0.12); color: #2563eb; }
+  .chip-done { background: rgba(22, 163, 74, 0.14); color: #16a34a; }
+  .chip-rem { background: rgba(249, 115, 22, 0.14); color: #ea580c; }
+
+  body.dark-mode .chip-total { color: #60a5fa; }
+  body.dark-mode .chip-done { color: #4ade80; }
+  body.dark-mode .chip-rem { color: #fb923c; }
+
+  .timer-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .timer-btn {
+    background: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .timer-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  .progress-track {
+    width: 100%;
+    height: 10px;
+    background: var(--bg-main);
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+  }
+
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #16a34a, #22c55e, #f97316);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+  }
+
+  /* Now Playing Studio Box */
+  .studio-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 820px) {
+    .studio-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .now-playing-card {
+    background: var(--studio-grad);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .studio-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .live-badge {
+    background: rgba(249, 115, 22, 0.25);
+    border: 1px solid #f97316;
+    color: #fed7aa;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #f97316;
+    border-radius: 50%;
+    animation: pulse 1.4s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(249, 115, 22, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+  }
+
+  .cat-pill {
+    background: rgba(255,255,255,0.15);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .np-title-area {
+    margin: 14px 0 12px;
+  }
+
+  .np-ch-num {
+    font-size: 0.85rem;
+    color: #93c5fd;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .np-main-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-top: 3px;
+    line-height: 1.35;
+    color: #ffffff;
+  }
+
+  .np-sub-title {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-top: 3px;
+  }
+
+  /* Animated Equalizer Bars */
+  .soundwave-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+    height: 42px;
+    margin: 10px 0 14px;
+    padding: 6px 14px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .bar {
+    width: 6px;
+    background: linear-gradient(to top, #f97316, #fde047);
+    border-radius: 4px;
+    height: 10px;
+    animation: sound 1.2s linear infinite alternate;
+  }
+
+  .soundwave-box.paused .bar {
+    animation-play-state: paused;
+    height: 8px !important;
+  }
+
+  @keyframes sound {
+    0% { height: 6px; opacity: 0.55; }
+    50% { height: 28px; opacity: 0.9; }
+    100% { height: 34px; opacity: 1; }
+  }
+
+  .bar:nth-child(1) { animation-duration: 0.7s; }
+  .bar:nth-child(2) { animation-duration: 0.95s; }
+  .bar:nth-child(3) { animation-duration: 0.6s; }
+  .bar:nth-child(4) { animation-duration: 1.1s; }
+  .bar:nth-child(5) { animation-duration: 0.8s; }
+  .bar:nth-child(6) { animation-duration: 0.65s; }
+  .bar:nth-child(7) { animation-duration: 1.05s; }
+  .bar:nth-child(8) { animation-duration: 0.75s; }
+  .bar:nth-child(9) { animation-duration: 0.9s; }
+  .bar:nth-child(10) { animation-duration: 0.6s; }
+  .bar:nth-child(11) { animation-duration: 1.15s; }
+  .bar:nth-child(12) { animation-duration: 0.85s; }
+  .bar:nth-child(13) { animation-duration: 0.7s; }
+  .bar:nth-child(14) { animation-duration: 0.95s; }
+  .bar:nth-child(15) { animation-duration: 0.65s; }
+  .bar:nth-child(16) { animation-duration: 1.0s; }
+
+  /* Embedded Player Container */
+  .player-wrapper {
+    background: rgba(15, 23, 42, 0.65);
+    border-radius: 14px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .drive-iframe-box {
+    width: 100%;
+    height: 68px;
+    border: none;
+    border-radius: 10px;
+    background: #0f172a;
+    overflow: hidden;
+  }
+
+  .html5-audio {
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    border-radius: 8px;
+  }
+
+  .studio-controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .ctrl-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 12px;
+    border-radius: 11px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .btn-primary-play {
+    background: #f97316;
+    color: #fff;
+  }
+  .btn-primary-play:hover { background: #ea580c; }
+
+  .btn-popup {
+    background: rgba(255, 255, 255, 0.16);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .btn-popup:hover { background: rgba(255, 255, 255, 0.26); }
+
+  .btn-download {
+    background: #16a34a;
+    color: #fff;
+  }
+  .btn-download:hover { background: #15803d; }
+
+  /* Dual Coding Key Takeaways Box */
+  .takeaways-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow-md);
+    border: 2px solid rgba(59, 130, 246, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .takeaways-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border-bottom: 2px dashed var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
+
+  .takeaways-header h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .dual-badge {
+    background: #fef3c7;
+    color: #b45309;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid #fde68a;
+  }
+
+  .points-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .points-list li {
+    font-size: 0.94rem;
+    background: var(--bg-main);
+    padding: 9px 12px;
+    border-radius: 11px;
+    border-left: 4px solid var(--accent);
+    font-weight: 500;
+  }
+
+  .formula-box {
+    margin-top: 12px;
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.12), rgba(249, 115, 22, 0.12));
+    border: 1px solid rgba(249, 115, 22, 0.35);
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+
+  .formula-title {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--accent-dark);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .formula-content {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  /* Filter & Search Section */
+  .playlist-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .filter-tab {
+    background: var(--card-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 8px 15px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  .filter-tab.active {
+    background: var(--primary-mid);
+    color: #ffffff;
+    border-color: var(--primary-mid);
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+  }
+
+  .search-input {
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-main);
+    font-size: 0.88rem;
+    min-width: 240px;
+    outline: none;
+  }
+
+  .search-input:focus {
+    border-color: var(--primary-light);
+  }
+
+  /* Episodes Grid */
+  .episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .ep-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 16px;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    transition: all 0.22s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .ep-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+  }
+
+  .ep-card.playing {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+  }
+
+  .ep-card.completed {
+    border-color: var(--success);
+    background: linear-gradient(to bottom right, var(--card-bg), rgba(22, 163, 74, 0.06));
+  }
+
+  .ep-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .ep-badge {
+    font-size: 0.76rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+
+  .cat-chem { background: #dbeafe; color: #1e40af; }
+  .cat-bio { background: #dcfce7; color: #166534; }
+  .cat-phy { background: #fef3c7; color: #92400e; }
+
+  .ep-size {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .ep-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+
+  .ep-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .ep-mini-points {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    background: var(--bg-main);
+    padding: 8px 10px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border-left: 3px solid var(--primary-light);
+  }
+
+  .ep-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: auto;
+  }
+
+  .ep-btn {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid var(--border-color);
+    background: var(--bg-main);
+    color: var(--text-main);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .ep-btn.play-now {
+    background: var(--primary-mid);
+    color: #fff;
+    border-color: var(--primary-mid);
+    flex: 1.3;
+  }
+
+  .ep-btn.play-now.active-ep {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .ep-btn.done-btn.is-done {
+    background: var(--success);
+    color: #fff;
+    border-color: var(--success);
+  }
+
+  /* Footer */
+  .footer-card {
+    margin-top: 26px;
+    background: var(--header-grad);
+    color: #fff;
+    border-radius: 18px;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .wa-btn {
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .confetti-piece {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fall 2.5s linear forwards;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="app-container">
+  <!-- Header -->
+  <header class="top-header">
+    <div class="brand-left">
+      <div class="owl-logo" title="Gyanu AI By Rishi Sir">🦉</div>
+      <div class="brand-titles">
+        <h1>ज्ञानू AI पॉडकास्ट स्टूडियो (FM)</h1>
+        <p>RBSE कक्षा 10 विज्ञान — संपूर्ण 13 अध्याय ऑडियो रिवीजन</p>
+        <span class="creator-pill">✨ क्या आप जानते हैं यह आपके लिए किसने तैयार किया है? — हाँ, आपके ऋषि सर!</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="action-btn" onclick="toggleDarkMode()" id="themeBtn">🌙 नाइट मोड</button>
+      <button class="action-btn" onclick="resetProgress()">🔄 रीसेट</button>
+    </div>
+  </header>
+
+  <!-- Gamified Progress & Timer -->
+  <section class="stats-dashboard">
+    <div class="stats-top-row">
+      <div class="stat-badges">
+        <span class="stat-chip chip-total">🎧 कुल एपिसोड: <strong id="statTotal">13</strong></span>
+        <span class="stat-chip chip-done">✅ सुन लिए: <strong id="statDone">0</strong></span>
+        <span class="stat-chip chip-rem">⏳ बाकी हैं: <strong id="statRem">13</strong></span>
+      </div>
+      <div class="timer-box">
+        <span style="font-size:0.82rem;font-weight:700;color:var(--text-muted);">⏱️ स्टडी टाइमर:</span>
+        <button class="timer-btn" onclick="startStudyTimer(15, this)">15 Min</button>
+        <button class="timer-btn" onclick="startStudyTimer(30, this)">30 Min</button>
+        <button class="timer-btn" id="timerDisplay" style="display:none;background:#dc2626;color:#fff;border-color:#dc2626;" onclick="stopStudyTimer()">00:00 ✖</button>
+      </div>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressBar"></div>
+    </div>
+  </section>
+
+  <!-- Studio Player + Dual Coding Takeaways -->
+  <section class="studio-grid">
+    <!-- Left: Now Playing Studio -->
+    <div class="now-playing-card">
+      <div>
+        <div class="studio-top-bar">
+          <span class="live-badge"><span class="pulse-dot"></span> NOW PLAYING STUDIO</span>
+          <span class="cat-pill" id="npCatBadge">🧪 रसायन विज्ञान</span>
+        </div>
+
+        <div class="np-title-area">
+          <div class="np-ch-num" id="npChNum">अध्याय 1 • EPISODE 01</div>
+          <h2 class="np-main-title" id="npTitle">रासायनिक अभिक्रियाएँ एवं समीकरण</h2>
+          <div class="np-sub-title" id="npSubtitle">🎙️ Ch-1: रासायनिक अभिक्रियाएँ और समीकरण का पूरा पाठ</div>
+        </div>
+
+        <!-- Animated Equalizer -->
+        <div class="soundwave-box" id="soundwaveBox">
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+      </div>
+
+      <!-- In-App Player & Direct Buttons -->
+      <div>
+        <div class="player-wrapper">
+          <iframe id="drivePlayerFrame" class="drive-iframe-box" src="https://drive.google.com/file/d/10qiLiGX-o0RarQwUtE3J9lu67Rd7LNwG/preview" allow="autoplay"></iframe>
+          <audio id="fallbackAudio" class="html5-audio" controls preload="none">
+            <source id="fallbackSource" src="https://drive.google.com/uc?export=download&id=10qiLiGX-o0RarQwUtE3J9lu67Rd7LNwG" type="audio/mp4">
+          </audio>
+        </div>
+
+        <div class="studio-controls">
+          <button class="ctrl-btn btn-primary-play" onclick="markCurrentDone()" id="npDoneBtn">✅ सुन लिया टिक करें</button>
+          <a id="npPopupLink" href="https://drive.google.com/file/d/10qiLiGX-o0RarQwUtE3J9lu67Rd7LNwG/view?usp=drivesdk" target="_blank" class="ctrl-btn btn-popup">🚀 फुल-स्क्रीन प्लेयर</a>
+          <a id="npDownloadLink" href="https://drive.google.com/uc?export=download&id=10qiLiGX-o0RarQwUtE3J9lu67Rd7LNwG" target="_blank" class="ctrl-btn btn-download">📥 डाउनलोड (.m4a)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Dual Coding Takeaways -->
+    <div class="takeaways-card">
+      <div>
+        <div class="takeaways-header">
+          <h3>📌 सुनते-सुनते पढ़ें (Key Highlights)</h3>
+          <span class="dual-badge">🧠 2X मेमोरी बूस्टर</span>
+        </div>
+        <ul class="points-list" id="npPointsList">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+
+      <div class="formula-box">
+        <div class="formula-title">🏆 बोर्ड परीक्षा महत्वपूर्ण सूत्र / समीकरण (RBSE 2024–26):</div>
+        <div class="formula-content" id="npFormulaBox">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search -->
+  <section class="playlist-controls">
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterEpisodes('all', this)">📚 सभी 13 पाठ</button>
+      <button class="filter-tab" onclick="filterEpisodes('chem', this)">🧪 रसायन (Ch 1–4)</button>
+      <button class="filter-tab" onclick="filterEpisodes('bio', this)">🧬 जीव विज्ञान (Ch 5–8, 13)</button>
+      <button class="filter-tab" onclick="filterEpisodes('phy', this)">⚡ भौतिकी (Ch 9–12)</button>
+    </div>
+    <input type="text" class="search-input" id="searchInput" placeholder="🔍 अध्याय या टॉपिक खोजें..." oninput="renderPlaylist()">
+  </section>
+
+  <!-- All 13 Chapters Playlist Grid -->
+  <section class="episodes-grid" id="episodesGrid">
+    <!-- Rendered via JS -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-card">
+    <div>
+      <h3 style="font-size:1.1rem;font-weight:800;">🦉 GYANU AI By Rishi Sir — राजस्थान बोर्ड डिजिटल क्रांति</h3>
+      <p style="font-size:0.86rem;opacity:0.92;">कान में ईयरफोन लगाएँ और चलते-फिरते पूरे विज्ञान का स्मार्ट रिवीजन करें!</p>
+    </div>
+    <a href="https://wa.me/919251477188?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%8B%E0%A4%B7%E0%A4%BF%20%E0%A4%B8%E0%A4%B0%2C%20%E0%A4%AE%E0%A5%88%E0%A4%82%20%E0%A4%95%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE%2010%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%20%E0%A4%91%E0%A4%A1%E0%A4%BF%E0%A4%AF%E0%A5%8B%20%E0%A4%AA%E0%A5%89%E0%A4%A1%E0%A4%95%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%20%E0%A4%B8%E0%A5%81%E0%A4%A8%20%E0%A4%B0%E0%A4%B9%E0%A4%BE%20%E0%A4%B9%E0%A5%82%E0%A4%81!" target="_blank" class="wa-btn">
+      📲 ऋषि सर WhatsApp सहायता: 9251477188
+    </a>
+  </footer>
+</div>
+
+<script>
+const podcastsData = [
+  {
+    ch: 1,
+    cat: 'chem',
+    catLabel: '🧪 रसायन विज्ञान',
+    title: 'अध्याय 1: रासायनिक अभिक्रियाएँ एवं समीकरण',
+    epTitle: 'Ch-1: रासायनिक अभिक्रियाएँ और समीकरण का पूरा पाठ.m4a',
+    fileId: '10qiLiGX-o0RarQwUtE3J9lu67Rd7LNwG',
+    size: '27.1 MB',
+    points: [
+      'संयोजन, वियोजन (ऊष्मीय, वैद्युत, प्रकाशीय), विस्थापन एवं द्विविस्थापन अभिक्रियाओं की संपूर्ण समझ।',
+      'उपचयन (ऑक्सीकरण) व अपचयन (रेडॉक्स अभिक्रिया) तथा दैनिक जीवन में संक्षारण और विकृतगंधिता से बचाव।',
+      'ऊष्माक्षेपी (श्वसन, प्राकृतिक गैस का दहन) एवं ऊष्माशोषी अभिक्रियाओं के बोर्ड परीक्षा उदाहरण।'
+    ],
+    formula: '2Mg + O₂ → 2MgO | CaO + H₂O → Ca(OH)₂ + ऊष्मा | 2FeSO₄ (Δ) → Fe₂O₃ + SO₂ + SO₃'
+  },
+  {
+    ch: 2,
+    cat: 'chem',
+    catLabel: '🧪 रसायन विज्ञान',
+    title: 'अध्याय 2: अम्ल, क्षारक एवं लवण',
+    epTitle: 'Ch-2: अम्ल क्षारक और लवण का रसायन.m4a',
+    fileId: '1LnOONZGr-aBN7CDF9sFMKAoOQ7UwaEQd',
+    size: '36.9 MB',
+    points: [
+      'प्राकृतिक व संश्लेषित सूचक, गंधीय सूचक तथा अम्ल व क्षारकों के धातु, कार्बोनेट व ऑक्साइड से रासायनिक गुण।',
+      'pH स्केल (0 से 14) का दैनिक जीवन में महत्व: पाचन तंत्र, दंत क्षय (pH < 5.5), मिट्टी का pH व नेटल डंक।',
+      'क्लोर-क्षार प्रक्रिया, विरंजक चूर्ण, बेकिंग सोडा, धोने का सोडा और प्लास्टर ऑफ पेरिस (POP) के सूत्र व उपयोग।'
+    ],
+    formula: 'विरंजक चूर्ण: CaOCl₂ | बेकिंग सोडा: NaHCO₃ | धोने का सोडा: Na₂CO₃·10H₂O | POP: CaSO₄·½H₂O'
+  },
+  {
+    ch: 3,
+    cat: 'chem',
+    catLabel: '🧪 रसायन विज्ञान',
+    title: 'अध्याय 3: धातु एवं अधातु',
+    epTitle: 'Ch-3: धातु एवं अधातु का संपूर्ण विज्ञान.m4a',
+    fileId: '1hJBw15FJ-j0ULP1b_vGmbCzahRtDHE3H',
+    size: '30.8 MB',
+    points: [
+      'धातुओं के भौतिक गुण (आघातवर्ध्यता, तन्यता) व अपवाद: द्रव धातु (पारा-Hg), चाकू से कटने वाली धातु (Na, K)।',
+      'उभयधर्मी ऑक्साइड (Al₂O₃, ZnO), सक्रियता श्रेणी तथा आयनिक यौगिकों का निर्माण व उच्च गलनांक का कारण।',
+      'धातुकर्म: भर्जन व निस्तापन में अंतर, थर्मिट अभिक्रिया (रेलवे ट्रैक जोड़ना) और कॉपर का विद्युत अपघटनी परिष्करण।'
+    ],
+    formula: 'थर्मिट अभिक्रिया: Fe₂O₃ + 2Al → 2Fe(l) + Al₂O₃ + ऊष्मा | एक्वा रेजिया = 3 HCl : 1 HNO₃'
+  },
+  {
+    ch: 4,
+    cat: 'chem',
+    catLabel: '🧪 रसायन विज्ञान',
+    title: 'अध्याय 4: कार्बन एवं उसके यौगिक',
+    epTitle: 'Ch-4: कार्बन और उसके यौगिकों की गहरी समझ.m4a',
+    fileId: '1WpDK9lHXDjPZMhR3tmmWvMo1GukcBI38',
+    size: '32.5 MB',
+    points: [
+      'कार्बन की सर्वतोमुखी प्रकृति: शृंखलन (Catenation) व चतुःसंयोजकता; संतृप्त (एल्केन) व असंतृप्त (एल्कीन, एल्काइन) हाइड्रोकार्बन।',
+      'प्रकार्यात्मक समूह (ऐल्कोहॉल, ऐल्डिहाइड, कीटोन, कार्बोक्सिलिक अम्ल), समजातीय श्रेणी और संरचनात्मक समावयवता।',
+      'एथेनॉल व एथेनॉइक अम्ल के गुण, एस्टरीकरण, साबुनीकरण तथा साबुन की मिसेल (Micelle) निर्माण द्वारा सफाई प्रक्रिया।'
+    ],
+    formula: 'एल्केन: CₙH₂ₙ₊₂ | एल्कीन: CₙH₂ₙ | एल्काइन: CₙH₂ₙ₋₂ | एस्टरीकरण: CH₃COOH + C₂H₅OH → CH₃COOC₂H₅ + H₂O'
+  },
+  {
+    ch: 5,
+    cat: 'bio',
+    catLabel: '🧬 जीव विज्ञान',
+    title: 'अध्याय 5: जैव प्रक्रम',
+    epTitle: 'Ch-5: जैव प्रक्रम और शरीर की मशीनरी.m4a',
+    fileId: '1_ZWaOml16wK99SRrtxBJeTiIIGQ54AEq',
+    size: '47.0 MB',
+    points: [
+      'स्वपोषी व विषमपोषी पोषण, प्रकाश-संश्लेषण के चरण तथा मानव पाचन तंत्र (आमाशय में HCl, क्षुद्रांत्र के दीर्घरोम/Villi)।',
+      'वायवीय एवं अवायवीय श्वसन, ग्लूकोज के विखंडन के 3 पथ और मानव फुफ्फुस में कूपिकाओं (Alveoli) द्वारा गैस विनिमय।',
+      'मानव हृदय में दोहरा परिसंचरण, पादपों में जाइलम व फ्लोएम द्वारा वहन तथा वृक्काणु (Nephron) द्वारा मूत्र निर्माण।'
+    ],
+    formula: 'प्रकाश-संश्लेषण: 6CO₂ + 12H₂O → C₆H₁₂O₆ + 6O₂ + 6H₂O | वायवीय श्वसन ऊर्जा = 38 ATP'
+  },
+  {
+    ch: 6,
+    cat: 'bio',
+    catLabel: '🧬 जीव विज्ञान',
+    title: 'अध्याय 6: नियंत्रण एवं समन्वय',
+    epTitle: 'Ch-6: नियंत्रण एवं समन्वय.m4a',
+    fileId: '1K28FIuqZtr0Koh24_zU3oH9pQyXZ7Ett',
+    size: '44.4 MB',
+    points: [
+      'तंत्रिका कोशिका (न्यूरॉन) की संरचना, अंतर्ग्रथन (सिनेप्स), प्रतिवर्ती क्रिया (मेरुरज्जु) और प्रतिवर्ती चाप।',
+      'मानव मस्तिष्क के मुख्य भाग: अग्रमस्तिष्क (सोचने का केंद्र), मध्यमस्तिष्क और पश्चमस्तिष्क (अनुमस्तिष्क - शरीर संतुलन, मेडुला)।',
+      'पादप समन्वय (प्रकाशानुवर्तन, गुरुत्वानुवर्तन, रसायनानुवर्तन) व पादप हॉर्मोन तथा जंतु अंतःस्रावी ग्रंथियाँ (थायरॉक्सिन, इंसुलिन, एड्रीनलीन)।'
+    ],
+    formula: 'पादप वृद्धि हॉर्मोन: ऑक्सिन, जिब्बरेलिन, साइटोकाइनिन | वृद्धि संदमन: एब्सिसिक अम्ल (ABA)'
+  },
+  {
+    ch: 7,
+    cat: 'bio',
+    catLabel: '🧬 जीव विज्ञान',
+    title: 'अध्याय 7: जीव जनन कैसे करते हैं?',
+    epTitle: 'Ch-7: जीव जनन और प्रजातियों का अस्तित्व.m4a',
+    fileId: '1h3BvxTxdk4VPtUo7lJCmw2f-8sXxX9aU',
+    size: '42.3 MB',
+    points: [
+      'प्रजनन में DNA प्रतिकृति और विभिन्नता का महत्व; अलैंगिक जनन की विधियाँ: द्विखंडन, बहुखंडन, मुकुलन, खंडन, पुनरुद्भवन व कायिक प्रवर्धन।',
+      'पुष्पी पादपों में लैंगिक जनन: पुंकेसर व स्त्रीकेसर, स्व-परागण व पर-परागण तथा निषेचन के पश्चात बीज व फल निर्माण।',
+      'मानव नर एवं मादा जनन तंत्र, प्लेसेंटा (अपरा) की भूमिका, ऋतुस्राव और जनन स्वास्थ्य व गर्भनिरोधक युक्तियाँ।'
+    ],
+    formula: 'द्विखंडन: अमीबा, लेश्मानिया | बहुखंडन: प्लैज्मोडियम | मुकुलन: हाइड्रा, यीस्ट | पुनरुद्भवन: प्लेनेरिया'
+  },
+  {
+    ch: 8,
+    cat: 'bio',
+    catLabel: '🧬 जीव विज्ञान',
+    title: 'अध्याय 8: आनुवंशिकता',
+    epTitle: 'Ch-8: आनुवंशिकता और लिंग निर्धारण का विज्ञान.m4a',
+    fileId: '16Zj2L7CkXX6SSSDdODQFmHIn7p95l6tN',
+    size: '34.5 MB',
+    points: [
+      'जनन के दौरान विभिन्नताओं का संचयन और ग्रेगर जॉन मेंडल द्वारा मटर के पौधे (Pisum sativum) पर किए गए संकरण प्रयोग।',
+      'मेंडल के वंशागति के नियम: प्रभाविता का नियम, पृथक्करण का नियम (एकसंकर क्रॉस) और स्वतंत्र अपव्यूहन का नियम (द्विसंकर क्रॉस)।',
+      'मानव में लिंग निर्धारण (XX मादा एवं XY नर गुणसूत्र) में पिता के गुणसूत्र की निर्णायक भूमिका।'
+    ],
+    formula: 'एकसंकर F₂ लक्षण अनुपात = 3:1 (जीनप्रारूप 1:2:1) | द्विसंकर F₂ अनुपात = 9:3:3:1 | लिंग गुणसूत्र: XX / XY'
+  },
+  {
+    ch: 9,
+    cat: 'phy',
+    catLabel: '⚡ भौतिक विज्ञान',
+    title: 'अध्याय 9: प्रकाश – परावर्तन तथा अपवर्तन',
+    epTitle: 'Ch-9: प्रकाश परावर्तन और अपवर्तन का पूरा विज्ञान.m4a',
+    fileId: '10xr8pL5TdQVvv9bbCyaknohKLUMNPy-0',
+    size: '41.3 MB',
+    points: [
+      'प्रकाश के परावर्तन के नियम, अवतल एवं उत्तल दर्पण द्वारा प्रतिबिंब निर्माण और वाहनों में उत्तल दर्पण (पश्च-दृश्य) के उपयोग।',
+      'प्रकाश का अपवर्तन, कांच के आयताकार स्लैब से अपवर्तन, स्नेल का नियम और निरपेक्ष अपवर्तनांक (हीरे का अपवर्तनांक = 2.42)।',
+      'उत्तल एवं अवतल लेंस द्वारा प्रतिबिंब निर्माण, चिह्न परिपाटी, दर्पण व लेंस सूत्र और लेंस की क्षमता (डाइऑप्टर - D)।'
+    ],
+    formula: 'दर्पण सूत्र: 1/v + 1/u = 1/f | लेंस सूत्र: 1/v - 1/u = 1/f | क्षमता P = 1/f (मीटर में) | स्नेल नियम: n = sin i / sin r'
+  },
+  {
+    ch: 10,
+    cat: 'phy',
+    catLabel: '⚡ भौतिक विज्ञान',
+    title: 'अध्याय 10: मानव नेत्र तथा रंग-बिरंगा संसार',
+    epTitle: 'Ch-10: मानव नेत्र और रंगीन दुनिया का विज्ञान.m4a',
+    fileId: '1tPzHkQ66hMJKMdh2qINfVed4lrxuJLeT',
+    size: '44.7 MB',
+    points: [
+      'मानव नेत्र की संरचना, समंजन क्षमता, स्पष्ट दृष्टि की न्यूनतम दूरी (25 cm) और दूर बिंदु (अनंत)।',
+      'दृष्टि दोष एवं संशोधन: निकट-दृष्टि दोष (अवतल लेंस), दीर्घ-दृष्टि दोष (उत्तल लेंस) और जरा-दूरदृष्टिता (द्विफोकसी लेंस)।',
+      'प्रिज्म से श्वेत प्रकाश का वर्ण-विक्षेपण (VIBGYOR), इंद्रधनुष निर्माण, तारों का टिमटिमाना (वायुमंडलीय अपवर्तन) व टिंडल प्रभाव।'
+    ],
+    formula: 'स्पष्ट दृष्टि की अल्पतम दूरी = 25 cm | निकट-दृष्टि संशोधन = अवतल लेंस (-P) | दीर्घ-दृष्टि संशोधन = उत्तल लेंस (+P)'
+  },
+  {
+    ch: 11,
+    cat: 'phy',
+    catLabel: '⚡ भौतिक विज्ञान',
+    title: 'अध्याय 11: विद्युत',
+    epTitle: 'Ch-11: विद्युत धारा और ओम का नियम.m4a',
+    fileId: '1gAkmNG-VsE9ImEgoMGKBTsS1WUPzHQnX',
+    size: '44.4 MB',
+    points: [
+      'विद्युत धारा (I = Q/t), विभवांतर (V = W/Q), ओम का नियम (V ∝ I) और चालक के प्रतिरोध को प्रभावित करने वाले कारक।',
+      'प्रतिरोधकों का श्रेणीक्रम एवं पार्श्वक्रम (समानांतर क्रम) संयोजन तथा घरेलू परिपथों में पार्श्वक्रम संयोजन के लाभ।',
+      'विद्युत धारा का तापीय प्रभाव, जूल का तापन नियम, विद्युत फ्यूज, विद्युत शक्ति (Watt) और ऊर्जा का व्यापारिक मात्रक (kWh / यूनिट)।'
+    ],
+    formula: 'V = IR | R = ρ(l/A) | श्रेणी: R = R₁+R₂+R₃ | पार्श्व: 1/R = 1/R₁+1/R₂ | जूल नियम: H = I²Rt | शक्ति P = VI = I²R'
+  },
+  {
+    ch: 12,
+    cat: 'phy',
+    catLabel: '⚡ भौतिक विज्ञान',
+    title: 'अध्याय 12: विद्युत धारा के चुंबकीय प्रभाव',
+    epTitle: 'Ch-12: बिजली के तारों में छिपा चुंबक.m4a',
+    fileId: '1gJBI--JP_ehNPKY6Bjy5L-q5ZHlZZqt4',
+    size: '40.0 MB',
+    points: [
+      'ऑर्स्टेड का प्रयोग, चुंबकीय क्षेत्र रेखाओं के गुण (दो रेखाएँ कभी प्रतिच्छेद नहीं करतीं) और दक्षिण-हस्त अंगुष्ठ नियम।',
+      'सीधे चालक, वृत्ताकार पाश और परिनालिका (Solenoid) में प्रवाहित विद्युत धारा के कारण चुंबकीय क्षेत्र एवं विद्युत चुंबक।',
+      'फ्लेमिंग का वामहस्त नियम, घरेलू विद्युत परिपथ (विद्युन्मय, उदासीन व हरा भूसंपर्क तार), लघुपथन (Short circuit) व अतिभारण।'
+    ],
+    formula: 'दक्षिण-हस्त अंगुष्ठ नियम: अंगूठा = धारा (I), अंगुलियाँ = चुंबकीय क्षेत्र (B) | फ्लेमिंग वामहस्त: F - B - I (अंगूठा-तर्जनी-मध्यमा)'
+  },
+  {
+    ch: 13,
+    cat: 'bio',
+    catLabel: '🧬 जीव विज्ञान (पर्यावरण)',
+    title: 'अध्याय 13: हमारा पर्यावरण',
+    epTitle: 'Ch-13: पर्यावरण ऊर्जा प्रवाह और ओज़ोन परत.m4a',
+    fileId: '1vJdApR4RX53QdhZNuk2_pBsObRELTC4Q',
+    size: '44.2 MB',
+    points: [
+      'पारितंत्र के जैविक (उत्पादक, उपभोक्ता, अपघटक) व अजैविक घटक, आहार श्रृंखला, आहार जाल और पोषी स्तर।',
+      'ऊर्जा प्रवाह का 10% नियम (एकदिशीय ऊर्जा प्रवाह) तथा आहार श्रृंखला में जैव आवर्धन (Biological Magnification - DDT)।',
+      'ओज़ोन परत (O₃) का महत्व एवं CFCs से अपक्षय तथा जैव-निम्नीकरणीय व अजैव-निम्नीकरणीय कचरा प्रबंधन (3R सिद्धांत)।'
+    ],
+    formula: '10% ऊर्जा नियम: प्रत्येक पोषी स्तर पर केवल 10% ऊर्जा स्थानांतरित | ओज़ोन निर्माण: O₂ (UV) → O + O ; O + O₂ → O₃'
+  }
+];
+
+let currentCh = 1;
+let currentFilter = 'all';
+let completedChapters = JSON.parse(localStorage.getItem('gyanu_sci10_podcast_done') || '[]');
+let timerInterval = null;
+
+function initApp() {
+  if (localStorage.getItem('gyanu_sci10_podcast_dark') === 'true') {
+    document.body.classList.add('dark-mode');
+    document.getElementById('themeBtn').innerHTML = '☀️ लाइट मोड';
+  }
+  selectEpisode(1, false);
+  updateStats();
+  renderPlaylist();
+}
+
+function selectEpisode(chNum, scrollToTop = true) {
+  currentCh = chNum;
+  const ep = podcastsData.find(x => x.ch === chNum);
+  if (!ep) return;
+
+  document.getElementById('npCatBadge').textContent = ep.catLabel;
+  document.getElementById('npChNum').textContent = `अध्याय ${ep.ch} • EPISODE ${String(ep.ch).padStart(2, '0')} (${ep.size})`;
+  document.getElementById('npTitle').textContent = ep.title;
+  document.getElementById('npSubtitle').textContent = `🎙️ ${ep.epTitle}`;
+
+  // Update embedded Drive preview & fallback HTML5 player
+  const previewUrl = `https://drive.google.com/file/d/${ep.fileId}/preview`;
+  const viewUrl = `https://drive.google.com/file/d/${ep.fileId}/view?usp=drivesdk`;
+  const downloadUrl = `https://drive.google.com/uc?export=download&id=${ep.fileId}`;
+
+  document.getElementById('drivePlayerFrame').src = previewUrl;
+  const audioEl = document.getElementById('fallbackAudio');
+  document.getElementById('fallbackSource').src = downloadUrl;
+  audioEl.load();
+
+  document.getElementById('npPopupLink').href = viewUrl;
+  document.getElementById('npDownloadLink').href = downloadUrl;
+
+  // Populate Dual-Coding Highlights
+  const pointsList = document.getElementById('npPointsList');
+  pointsList.innerHTML = ep.points.map(p => `<li>${p}</li>`).join('');
+  document.getElementById('npFormulaBox').textContent = ep.formula;
+
+  updateNowPlayingDoneBtn();
+  renderPlaylist();
+
+  if (scrollToTop) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function updateNowPlayingDoneBtn() {
+  const btn = document.getElementById('npDoneBtn');
+  const isDone = completedChapters.includes(currentCh);
+  if (isDone) {
+    btn.innerHTML = '🎉 सुन लिया (Completed)';
+    btn.style.background = '#16a34a';
+  } else {
+    btn.innerHTML = '✅ सुन लिया टिक करें';
+    btn.style.background = '#f97316';
+  }
+}
+
+function toggleChapterDone(chNum, event) {
+  if (event) event.stopPropagation();
+  const idx = completedChapters.indexOf(chNum);
+  if (idx > -1) {
+    completedChapters.splice(idx, 1);
+  } else {
+    completedChapters.push(chNum);
+    launchConfetti();
+  }
+  localStorage.setItem('gyanu_sci10_podcast_done', JSON.stringify(completedChapters));
+  updateStats();
+  updateNowPlayingDoneBtn();
+  renderPlaylist();
+}
+
+function markCurrentDone() {
+  toggleChapterDone(currentCh);
+}
+
+function updateStats() {
+  const total = podcastsData.length;
+  const done = completedChapters.length;
+  const rem = total - done;
+  const pct = Math.round((done / total) * 100);
+
+  document.getElementById('statTotal').textContent = total;
+  document.getElementById('statDone').textContent = done;
+  document.getElementById('statRem').textContent = rem;
+  document.getElementById('progressBar').style.width = pct + '%';
+}
+
+function filterEpisodes(cat, btnEl) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+  btnEl.classList.add('active');
+  renderPlaylist();
+}
+
+function renderPlaylist() {
+  const grid = document.getElementById('episodesGrid');
+  const q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+
+  const filtered = podcastsData.filter(ep => {
+    const matchCat = currentFilter === 'all' || ep.cat === currentFilter;
+    const matchSearch = !q || ep.title.toLowerCase().includes(q) || ep.epTitle.toLowerCase().includes(q) || ep.points.join(' ').toLowerCase().includes(q);
+    return matchCat && matchSearch;
+  });
+
+  grid.innerHTML = filtered.map(ep => {
+    const isPlaying = ep.ch === currentCh;
+    const isDone = completedChapters.includes(ep.ch);
+    const catClass = ep.cat === 'chem' ? 'cat-chem' : (ep.cat === 'bio' ? 'cat-bio' : 'cat-phy');
+    const viewUrl = `https://drive.google.com/file/d/${ep.fileId}/view?usp=drivesdk`;
+    const waText = encodeURIComponent(`🎧 *GYANU AI By Rishi Sir* - कक्षा 10 विज्ञान पॉडकास्ट
+*${ep.title}*
+यहाँ से सुनें: ${viewUrl}`);
+
+    return `
+      <div class="ep-card ${isPlaying ? 'playing' : ''} ${isDone ? 'completed' : ''}">
+        <div>
+          <div class="ep-top">
+            <span class="ep-badge ${catClass}">${ep.catLabel}</span>
+            <span class="ep-size">📦 ${ep.size}</span>
+          </div>
+          <div class="ep-title">${ep.title}</div>
+          <div class="ep-subtitle">🎙️ ${ep.epTitle}</div>
+          <div class="ep-mini-points">💡 ${ep.points[0]}</div>
+        </div>
+        <div class="ep-actions">
+          <button class="ep-btn play-now ${isPlaying ? 'active-ep' : ''}" onclick="selectEpisode(${ep.ch}, true)">
+            ${isPlaying ? '🔊 चल रहा है...' : '▶️ अभी सुनें'}
+          </button>
+          <button class="ep-btn done-btn ${isDone ? 'is-done' : ''}" onclick="toggleChapterDone(${ep.ch}, event)">
+            ${isDone ? '✅ सुन लिया' : '☑️ टिक करें'}
+          </button>
+          <a href="https://wa.me/?text=${waText}" target="_blank" class="ep-btn" title="दोस्त को शेयर करें">
+            📲 शेयर
+          </a>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('gyanu_sci10_podcast_dark', isDark);
+  document.getElementById('themeBtn').innerHTML = isDark ? '☀️ लाइट मोड' : '🌙 नाइट मोड';
+}
+
+function resetProgress() {
+  if (confirm('क्या आप वाकई सभी 13 अध्यायों की पॉडकास्ट प्रोग्रेस को रीसेट करना चाहते हैं?')) {
+    completedChapters = [];
+    localStorage.removeItem('gyanu_sci10_podcast_done');
+    updateStats();
+    updateNowPlayingDoneBtn();
+    renderPlaylist();
+  }
+}
+
+function startStudyTimer(mins, btnEl) {
+  stopStudyTimer();
+  document.querySelectorAll('.timer-btn').forEach(b => b.classList.remove('active'));
+  btnEl.classList.add('active');
+  let totalSec = mins * 60;
+  const disp = document.getElementById('timerDisplay');
+  disp.style.display = 'inline-block';
+
+  timerInterval = setInterval(() => {
+    totalSec--;
+    const m = String(Math.floor(totalSec / 60)).padStart(2, '0');
+    const s = String(totalSec % 60).padStart(2, '0');
+    disp.textContent = `⏱️ ${m}:${s} ✖`;
+    if (totalSec <= 0) {
+      stopStudyTimer();
+      alert('🎉 शाबाश! आपका ' + mins + ' मिनट का पॉडकास्ट रिवीजन सेशन पूरा हुआ!');
+    }
+  }, 1000);
+}
+
+function stopStudyTimer() {
+  if (timerInterval) clearInterval(timerInterval);
+  timerInterval = null;
+  document.querySelectorAll('.timer-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('timerDisplay').style.display = 'none';
+}
+
+function launchConfetti() {
+  const colors = ['#f97316', '#2563eb', '#16a34a', '#eab308', '#ec4899'];
+  for (let i = 0; i < 28; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti-piece';
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    el.style.animationDuration = (1.5 + Math.random() * 1.5) + 's';
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 3000);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', initApp);
+</script>
+</body>
+</html>
